@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Facturación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="w3-container w3-mobile">
+        <div class="container" style="max-width: 80%;">
+            <div class="header">
+                <div class="system-fact">
+                    <h3>Sistema de Facturación</h3>
+                </div>
+                <div class="number-fact">
+                    <h3 class="w3-trothird">Factura No 1.</h3>
+                    <h3 id="numfactura" class="w3-third">0000</h3>
+                </div>
+            </div>
+
+            <form action="guardarfactura.html" class="options" method="post">
+                <input type="hidden" id="numfacturar" class="numfacturar">
+                
+                <div class="select">
+                    <div class="responsive">
+                        <table class="table-opc">
+                            <tr class="type">
+                                <th style="width: 10%;">Id-Producto</th>
+                                <th style="width: 10%;">Cantidad</th>
+                                <th style="width: 10%;">Descripción</th>
+                                <th style="width: 10%;">Precio</th>
+                                <th style="width: 10%;">Total</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <br>
+                    <div class="opc-primary">
+                        <div class="new-fact">
+                            <button id="btnNueva" class="w3-button w3-teal" type="button">Nueva Factura</button>
+                            <input type="submit" id="guarfact" name="guarfact" class="guardar" value="Guardar Factura">
+                        </div>
+                        <div class="btn-field">
+                            <div class="btn-fields">
+                                <label for="sutotalfact">Subtotal:</label>
+                                <input type="text" id="sutotalfact" name="sutotalfact" class="input-fields">
+                            </div>
+                            <div class="btn-fields">
+                                <label for="impuestofact">IVA:</label>
+                                <input type="text" id="impuestofact" name="impuestofact" class="input-fields">
+                            </div>
+                            <div class="btn-fields">
+                                <label for="todpagarfact">Total a Pagar:</label>
+                                <input type="text" id="todpagarfact" class="input-fields">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="opc-second">
+                    <div id="datosproductos" class="second-field">
+                        <fieldset>
+                            <legend>Seleccionar Producto:</legend>
+                            <div class="fields-opc">
+                                <label for="codpro">Código:</label>
+                                <input type="text" id="codpro" class="w3-input w3-border w3-sand">
+                            </div>
+                            <div class="fields-opc">
+                                <label for="cantpro">Cantidad:</label>
+                                <input type="text" id="cantpro" class="w3-input w3-border w3-sand">
+                            </div>
+                            <div class="fields-opc">
+                                <label for="despro">Descripción:</label>
+                                <input type="text" id="despro" class="w3-input w3-border w3-sand">
+                            </div>
+                            <div class="fields-opc">
+                                <label for="prepro">Precio:</label>
+                                <input type="text" id="prepro" class="w3-input w3-border w3-sand">
+                            </div>
+                            <div class="fields-opc">
+                                <label for="totpro">Total:</label>
+                                <input type="text" id="totpro" class="w3-input w3-border w3-sand">
+                            </div>
+                        </fieldset>
+                        <div class="btn2">
+                            <button id="btn2" class="w3-button w3-blue w3-button w3-hover-red" type="button">Agregar Producto</button>
+                        </div>
+                    </div>
+                    <div id="DatosCLiente" class="data">
+                        <fieldset>
+                            <legend>Seleccionar Cliente:</legend>
+                            <div class="data-customer">
+                                <label for="cod_cliente">Código:</label>
+                                <input type="text" id="cod_cliente" name="cod_cliente" class="w3-input w3-border w3-sand">
+                            </div>
+                            <div class="data-customer">
+                                <label for="nomcliente">Nombre del Cliente:</label>
+                                <input type="text" id="nomcliente" class="w3-input w3-border w3-sand">
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </form>
+            <div id="container"></div>
+        </div>
+    </main>
+</body>
+</html>
